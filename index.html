@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/index.js">
+    </script> 
+
+    <title>Wireframe</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="bodyshell">
+      <form id="city-form">
+        <input type="text"
+        placeholder = "Enter a city" 
+        autofocus="on"
+        id="city-input"
+        class="city-search shadow-sm" />
+        <button type="submit" class="btn btn-primary mb-1">Search</button>
+        <button type="button" class="btn btn-warning mb-1" id="city-change">Current</button>
+		  </form>
+    
+         <div class="container">
+      <h1 id="city">Alanya</h1>
+      <ul>
+        <li id="my-data"></li>
+        <li id="description">Partly cloudy</li>
+        <div class="row">
+          <div class="col-6"> 
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Cloudy icon">
+              <span class="temperature" id="temperature">°C</span> 
+              <span class="unit">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+               </div>    
+              
+                  <div class="col-6"> 
+        <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: 50%</li>
+              <li>Wind: 20 m/s</li>
+            </ul>
+                          
+            <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn-group"  >Precipitation</button>
+  <button type="button" class="btn-group">Humidity</button>
+  <button type="button" class="btn-group">Wind</button>
+</div>
+<br />
+<div class="star-rating">
+    <div class="star-rating__wrapper">
+      <div class="star-rating__avg"></div>
+        <div class="star-rating" data-id="page-1">
+          <div class="star-rating__bg">
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+          </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <span class="days">
+                          <div class="row">
+                <div class="col-2">
+                <img class="emojis" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png">
+                42°C
+                 <p>Tomorrow</p>
+                </div>
+                <div class="col-2">
+                                  <img class="emojis" src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png">
+                  38°C
+                  <p>Tuesday</p>
+                </div>
+                <div class="col-2">
+                  <img class="emojis" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png">
+                  39°C
+                  <p>
+                      Wednesday
+                  </p>
+                </div>
+                  <div class="col-2">
+                    <img class="emojis" src="https://ssl.gstatic.com/onebox/weather/48/sunny_s_cloudy.png">
+                    42°C
+                     <p>Thursday</p>
+                    </div>
+                    <div class="col-2">
+                      <img class="emojis" src="https://ssl.gstatic.com/onebox/weather/48/sunny.png">
+                      42°C
+                       <p>Friday</p>
+                      </div>
+                    </span>
+                    <p>Coded by <a href="https://www.facebook.com/inna.kalinkina.5">Inna Silina</a>
+                    </p>                   
+            
+                   </div>
+
+       </body>
+</html>

@@ -1,0 +1,63 @@
+body {
+  color: #878787;
+  font-size: 13px;
+  line-height: 15px;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 10px;
+}
+
+.temperature {
+  font-family: Google Sans, arial, sans-serif;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 56px;
+  color: black;
+}
+.items {
+  position: relative;
+  top: -25px;
+}
+.btn-group {
+  margin: 0px;
+  padding: 10px 20 px;
+  color: rebeccapurple;
+}
+.bodyshell {
+  padding: 20px;
+  margin: auto;
+  max-width: 630px;
+  max-height: 800px;
+  border-radius: 10px;
+  background-color: paleturquoise;
+  border: darkorchid solid rounded;
+}
+.values {
+  position: relative;
+  left: 100px;
+  top: -20px;
+}
+.star-rating {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  left: 50px;
+  width: 10px;
+  height: 50px;
+}
+.days {
+  position: relative;
+  left: 30px;
+}
+p {
+  text-align: center;
+  margin: 40px auto;
+}
